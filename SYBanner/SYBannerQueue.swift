@@ -43,7 +43,7 @@ open class SYBannerQueue: NSObject {
      Adds a banner to the queue
      */
     @objc
-    func addBanner(_ banner: SYBaseBanner, queuePosition: QueuePosition) {
+    public func addBanner(_ banner: SYBaseBanner, queuePosition: QueuePosition) {
         let currentBannersCount = banners.filter{$0.isDisplaying}.count
         
         if queuePosition == .back {
@@ -65,7 +65,7 @@ open class SYBannerQueue: NSObject {
     }
     
     @objc
-    func getFirstDisplayedBanner() -> SYBaseBanner? {
+    public func getFirstDisplayedBanner() -> SYBaseBanner? {
         return banners.filter{$0.isDisplaying}.first
     }
     /**
@@ -73,7 +73,7 @@ open class SYBannerQueue: NSObject {
      -parameter banner: A notification banner to remove from the queue.
      */
     @objc
-    func removeBanner(_ banner: SYBaseBanner) {
+    public func removeBanner(_ banner: SYBaseBanner) {
         if let index = banners.firstIndex(of: banner) {
             banners.remove(at: index)
         }
@@ -84,7 +84,7 @@ open class SYBannerQueue: NSObject {
      Shows the next notificaiton banner on the queue if one exists
      */
     @objc
-    func showNext() {
+    public func showNext() {
         if let banner = firstNotDisplayedBanner() {
             banner.show(placeOnQueue: false)
         }
@@ -94,7 +94,7 @@ open class SYBannerQueue: NSObject {
      Returns the first banner that is currently not displaying
      */
     @objc
-    func firstNotDisplayedBanner() -> SYBaseBanner? {
+    public func firstNotDisplayedBanner() -> SYBaseBanner? {
         return banners.filter { !$0.isDisplaying }.first
     }
     
