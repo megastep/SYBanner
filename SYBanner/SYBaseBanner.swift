@@ -274,10 +274,10 @@ extension SYBaseBanner {
         
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
-            superView.addSubview(self)
             if let willAppear = self.delegate?.notificationBannerWillAppear {
                 willAppear(self)
             }
+            superView.addSubview(self)
             UIImpactFeedbackGenerator(style: self.haptic).impactOccurred()
             
             self.positionFinalFrame {
@@ -320,11 +320,11 @@ extension SYBaseBanner {
                 self.bannerQueue.removeBanner(self)
                 self.isDisplaying = false
                 self.isDismissing = false
+                self.removeFromSuperview()
+                completion?()
                 if let didDisappear = self.delegate?.notificationBannerDidDisappear {
                     didDisappear(self)
                 }
-                self.removeFromSuperview()
-                completion?()
             }
         }
     }
