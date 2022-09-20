@@ -94,7 +94,7 @@ public class SYDefaultBanner: SYSimpleBanner {
         }
     }
     
-    override func postionView() {
+    override func positionView() {
         let containerSize = screenSize.width - (bannerInsets.left + bannerInsets.right)
        
         let labelRect = CGSize(width: containerSize - iconSize.width - (messageInsets.left * 2 + messageInsets.right), height: .greatestFiniteMagnitude)

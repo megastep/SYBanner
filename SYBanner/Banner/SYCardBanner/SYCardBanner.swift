@@ -213,7 +213,7 @@ public class SYCardBanner: SYBaseBanner {
         didTapButton?(button)
     }
     
-    override func postionView() {
+    override func positionView() {
         let containerSize = screenSize.width - (bannerInsets.left + bannerInsets.right)
         
         let labelRect = CGSize(width: containerSize - (_contentInsets.left + _contentInsets.right), height: .greatestFiniteMagnitude)

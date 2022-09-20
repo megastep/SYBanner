@@ -152,8 +152,8 @@ open class SYBaseBanner: UIView {
     }
     
     //MARK: Functions
-    internal func postionView() {
-        fatalError("postionView(): has not been implemented for BaseNotificationBanner")
+    internal func positionView() {
+        fatalError("positionView(): has not been implemented for BaseNotificationBanner")
     }
     
     internal func positionFinalFrame(_ animate: Bool = true, completion: (() -> ())? = nil) {
@@ -186,7 +186,7 @@ open class SYBaseBanner: UIView {
      */
     @objc
     public func show(placeOnQueue: Bool, queuePosition: QueuePosition = .back) {
-        self.postionView()
+        self.positionView()
         guard !isDisplaying else {return}
         if placeOnQueue {
             bannerQueue.addBanner(self, queuePosition: queuePosition)

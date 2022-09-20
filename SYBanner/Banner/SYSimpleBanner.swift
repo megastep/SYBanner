@@ -83,7 +83,7 @@ open class SYSimpleBanner: SYBaseBanner {
         messageLabel.textColor = messageColor
         messageLabel.numberOfLines = 0
         
-        self.postionView()
+        self.positionView()
         if self.isDisplaying {
             self.positionFinalFrame(false)
         }
@@ -99,7 +99,7 @@ open class SYSimpleBanner: SYBaseBanner {
         
     }
  
-    override func postionView() {
+    override func positionView() {
         let labelSize = getMessageLabelSize()
     
         var containerRect = CGRect.zero
