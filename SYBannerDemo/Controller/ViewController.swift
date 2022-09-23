@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showCustomBanner1(_ sender: UIButton) {
-        let dismissButton =  SYCardBannerButton(title: "Dismiss", font: .systemFont(ofSize: 14, weight: .semibold), style: .dismiss, tintColor: .lightGray) {
+        let dismissButton =  SYCardBannerButton(title: "Dismiss", font: .systemFont(ofSize: 14, weight: .semibold), style: .dismiss, tintColor: .lightGray) { _ in
             print("tapped dismiss")
         }
         
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
     
     @IBAction func showCustomBanner3(_ sender: UIButton) {
         let banner = SYCardBanner(title: "Easy to use\n Banners", type: .float)
-        banner.addButton(SYCardBannerButton(title: "Get started", font: .systemFont(ofSize: 18, weight: .semibold), cornerRadius: 15, style: .default, handler: {
+        banner.addButton(SYCardBannerButton(title: "Get started", font: .systemFont(ofSize: 18, weight: .semibold), cornerRadius: 15, style: .default, handler: { _ in
             banner.dismissView()
         }))
         banner.backgroundColor = getTraitColor()
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
     @IBAction func showCustomBanner4(_ sender: UIButton) {
         let banner = SYCardBanner(title: "Enter your name", subtitle: "Please enter your name and sign up with us today for great benefits. No Email required.", type: .float)
         
-        banner.addButton(SYCardBannerButton(title: "Sign up", font: .systemFont(ofSize: 14, weight: .semibold), style: .default) {
+        banner.addButton(SYCardBannerButton(title: "Sign up", font: .systemFont(ofSize: 14, weight: .semibold), style: .default) { _ in
             banner.dismissView()
         })
         banner.backgroundColor = getTraitColor()
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
     @IBAction func showCustomBanner5(_ sender: UIButton) {
         let banner = SYCardBanner(title: "Successfully downloaded", subtitle: "The requested video has been successfully downloaded. Watch it now or later in your gallery.", type: .float)
         
-        banner.addButton(SYCardBannerButton(title: "Watch video", font: .systemFont(ofSize: 16, weight: .semibold), style: .default, tintColor: .systemGreen) {
+        banner.addButton(SYCardBannerButton(title: "Watch video", font: .systemFont(ofSize: 16, weight: .semibold), style: .default, tintColor: .systemGreen) { _ in
             banner.dismissView()
         })
         
@@ -158,11 +158,11 @@ class ViewController: UIViewController {
     @IBAction func showCustomBanner6(_ sender: UIButton) {
         let banner = SYCardBanner(title: "Welcome 👋", subtitle: "Sign in or create a new account with us.", type: .float)
         
-        banner.addButton(SYCardBannerButton(title: "Sign in", font: .systemFont(ofSize: 16, weight: .semibold), style: .default) {
+        banner.addButton(SYCardBannerButton(title: "Sign in", font: .systemFont(ofSize: 16, weight: .semibold), style: .default) { _ in
             banner.dismissView()
         })
         
-        banner.addButton(SYCardBannerButton(title: "Sign up", font: .systemFont(ofSize: 16, weight: .semibold), style: .dismiss) {
+        banner.addButton(SYCardBannerButton(title: "Sign up", font: .systemFont(ofSize: 16, weight: .semibold), style: .dismiss) { _ in
             banner.dismissView()
         })
              

@@ -27,14 +27,14 @@ public class SYCardBannerButton: UIButton {
         }
     }
     /// Closure that will be executed if the button is tapped
-    var handler: (() -> ())?
+    var handler: ((SYCardBannerButton) -> ())?
     @objc private(set) var style: SYCardBannerButton.Style = .default
     
     /// currently selected index
     @objc public private(set) var selectedIndex : Int = 0
     
     @objc
-    public convenience init(title: String, font: UIFont = .systemFont(ofSize: 16), cornerRadius: CGFloat = 10, style: SYCardBannerButton.Style, tintColor: UIColor? = nil, handler: (() -> ())? = nil) {
+    public convenience init(title: String, font: UIFont = .systemFont(ofSize: 16), cornerRadius: CGFloat = 10, style: SYCardBannerButton.Style, tintColor: UIColor? = nil, handler: ((SYCardBannerButton) -> ())? = nil) {
         self.init(frame: .zero)
         self.title = title
         self.style = style
@@ -83,6 +83,6 @@ public class SYCardBannerButton: UIButton {
     
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        handler?()
+        handler?(self)
     }
 }
