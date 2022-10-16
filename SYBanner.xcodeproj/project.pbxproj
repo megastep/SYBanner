@@ -20,7 +20,7 @@
 		D055F34327FEFFDA00675E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D055F34127FEFFDA00675E9D /* Main.storyboard */; };
 		D055F34527FEFFE400675E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D055F34427FEFFE400675E9D /* Assets.xcassets */; };
 		D055F34827FEFFE400675E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D055F34627FEFFE400675E9D /* LaunchScreen.storyboard */; };
-		D055F35127FF013500675E9D /* SYBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D055F31C27FEFE6600675E9D /* SYBanner.framework */; platformFilter = ios; };
+		D055F35127FF013500675E9D /* SYBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D055F31C27FEFE6600675E9D /* SYBanner.framework */; };
 		D055F35227FF013500675E9D /* SYBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D055F31C27FEFE6600675E9D /* SYBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D055F35827FF062200675E9D /* SYCardBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F35727FF062200675E9D /* SYCardBannerButton.swift */; };
 		D055F35A27FF067A00675E9D /* SYCardBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F35927FF067A00675E9D /* SYCardBanner.swift */; };
@@ -372,7 +372,6 @@
 /* Begin PBXTargetDependency section */
 		D055F35427FF013500675E9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = D055F31B27FEFE6600675E9D /* SYBanner */;
 			targetProxy = D055F35327FF013500675E9D /* PBXContainerItemProxy */;
 		};
@@ -606,9 +605,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emrearmagan.SYBannerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -635,9 +637,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emrearmagan.SYBannerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
