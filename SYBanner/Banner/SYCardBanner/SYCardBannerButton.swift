@@ -42,7 +42,7 @@ public class SYCardBannerButton: UIButton {
         self.handler = handler
         self.cornerRadius = cornerRadius
         self._tintColor = tintColor
-        
+        self.accessibilityTraits = super.accessibilityTraits.union(.button)
         setupButton()
     }
     
@@ -60,6 +60,7 @@ public class SYCardBannerButton: UIButton {
         self.setTitle(title, for: .normal)
         self.titleLabel?.font = font
         self.layer.cornerRadius = cornerRadius
+        self.accessibilityLabel = title
         
         if let tintColor = _tintColor {
             self.tintColor = tintColor

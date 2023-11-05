@@ -60,7 +60,7 @@ open class SYSimpleBanner: SYBaseBanner {
         
         super.init(direction: direction, on: on, type: type)
         self.backgroundColor = color
-        
+        self.accessibilityTraits = .staticText
         setupView()
         setConstraints()
     }
@@ -82,7 +82,8 @@ open class SYSimpleBanner: SYBaseBanner {
         messageLabel.text = message
         messageLabel.textColor = messageColor
         messageLabel.numberOfLines = 0
-        
+        self.accessibilityLabel = message
+
         self.positionView()
         if self.isDisplaying {
             self.positionFinalFrame(false)
